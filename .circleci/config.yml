@@ -73,7 +73,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
       - hold:
           type: approval
           requires:
