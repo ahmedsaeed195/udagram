@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb init udagram-api --region us-east-1 --platform '64bit Amazon Linux 2 v5.5.5 running Node.js 14' && eb list && eb use udagram-api-dev && eb deploy && bin/setenv.sh",
+    "deploy": "npm run build && eb init udagram-api --region us-east-1 --platform '64bit Amazon Linux 2 v5.5.5 running Node.js 14' && eb list && eb use udagram-api-dev && eb deploy && chmod +x bin/setenv.sh && bin/setenv.sh",
     "build": "npm install . && npm run clean && tsc",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
